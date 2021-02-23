@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  background-color: #666;
+  font-family: 'Roboto';
+}
+
+.container {
+  padding-top: 5rem;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, .2);
+}
+
+.btn {
+  color: #42b983;
+  position: relative;
+  border-radius: 99px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  outline: none;
+  background-color: #fff;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.btn.primary {
+  background-color: #42b983;
+  color: #fff;
+}
+
+.btn:active {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .5rem;
+  overflow: hidden;
+}
+
+.preview-image {
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.preview-image.removing {
+  transform: scale(0);
+  transition: transform .3s;
+}
+
+.preview-image img {
+  width: 180px;
+  height: auto;
+}
+
+.preview-remove {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .25s;
+}
+
+.preview-info {
+  position: absolute;
+  right: 0;
+  bottom: -55px;
+  left: 0;
+  height: 24px;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, .5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .25s;
+  padding: 0 5px;
+}
+
+
+.preview-image:hover .preview-remove {
+  opacity: 1;
+}
+
+.preview-image:hover .preview-info {
+  bottom: 4px;
+}
+
+.preview-info-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #42b983;
+  text-align: center;
+  transition: width .22s;
+}
